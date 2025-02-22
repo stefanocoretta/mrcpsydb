@@ -1,0 +1,37 @@
+#' MRC Psycholinguistic Database
+#'
+#' The MRC Psycholinguistic Database.
+#'
+#' Coltheart, M. (Max), 1939- and Wilson, Michael John, 1939-, 1987, MRC Psycholinguistic Database Machine Usable Dictionary : expanded Shorter Oxford English Dictionary entries / Max Coltheart and Michael Wilson, Oxford Text Archive, http://hdl.handle.net/20.500.12024/1054.
+#'
+#' @format A data frame with 150,837 rows and 26 columns:
+#' \describe{
+#'   \item{nlet}{Number of letters in the word}
+#'   \item{nphon}{Number of phonemes in the word}
+#'   \item{nsyl}{Number of syllables in the word}
+#'   \item{kf_freq}{Kucera and Francis written frequency}
+#'   \item{kf_ncats}{Kucera and Francis number of categories}
+#'   \item{kf_nsamp}{Kucera and Francis number of samples}
+#'   \item{tl_freq}{Thorndike-Lorge frequency}
+#'   \item{brown_freq}{Brown verbal frequency}
+#'   \item{fam}{Familiarity}
+#'   \item{conc}{Concreteness}
+#'   \item{imag}{Imagery}
+#'   \item{meanc}{Mean Colerado Meaningfulness}
+#'   \item{meanp}{Mean Pavio Meaningfulness}
+#'   \item{aoa}{Age of acquisition}
+#'   \item{tq2}{Type}
+#'   \item{wtype}{Part of speech}
+#'   \item{pdwtype}{PD part of speech}
+#'   \item{alphsyl}{Alphasyllable}
+#'   \item{status}{Status}
+#'   \item{var}{Variant phoneme}
+#'   \item{cap}{Written capitalised}
+#'   \item{irreg}{Irregular plural}
+#'   \item{word}{The word}
+#'   \item{phon}{Phonetic transcription}
+#'   \item{dphon}{Edited phonetic transcription}
+#'   \item{stress}{Stress pattern}
+#' }
+#' @source <http://hdl.handle.net/20.500.12024/1054>
+"mrc_db"

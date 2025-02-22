@@ -1,0 +1,6 @@
+^renv$
+^renv\.lock$
+^mrcpsydb\.Rproj$
+^\.Rproj\.user$
+^data-raw$
+^LICENSE\.md$

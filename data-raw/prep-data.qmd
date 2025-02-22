@@ -1,0 +1,32 @@
+---
+title: "Prepare data"
+author: "Stefano Coretta"
+format: html
+---
+
+```{r}
+#| label: setup
+
+library(tidyverse)
+```
+
+```{r}
+mrc_db <- read_fwf(
+  "1054/mrc2.dct",
+  fwf_widths(
+    c(2, 2, 1, 5, 2, 3, 6, 4, 3, 3, 3, 3, 3, 3, 1, 1, 1, 1, 1, 1, 1, 1, NA),
+    c("nlet", "nphon", "nsyl", "kf_freq", "kf_ncats", "kf_nsamp", "tl_freq", "brown_freq", "fam", "conc", "imag", "meanc", "meanp", "aoa", "tq2", "wtype", "pdwtype", "alphsyl", "status", "var", "cap", "irreg", "last_col")
+  ),
+  col_types = "nnnnnnnnnnnnnnccccccccc"
+) |> 
+  separate(
+    last_col,
+    c("word", "phon", "dphon", "stress"),
+    sep = "\\|"
+  )
+```
+
+```{r}
+usethis::use_data(mrc_db, overwrite = TRUE)
+```
+
