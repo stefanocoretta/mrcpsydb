@@ -11,6 +11,17 @@ library(tidyverse)
 ```
 
 ```{r}
+ipa <- read_csv("ipa.csv")
+
+old <- ipa$symbol
+new <- ipa$ipa
+
+names(new) <- old
+
+```
+
+
+```{r}
 mrc_db <- read_fwf(
   "1054/mrc2.dct",
   fwf_widths(
@@ -23,6 +34,14 @@ mrc_db <- read_fwf(
     last_col,
     c("word", "phon", "dphon", "stress"),
     sep = "\\|"
+  ) |> 
+  mutate(
+    dphon = str_remove_all(dphon, "\\s?Q|\\s?2|\\s?2 Q"),
+    ipa = str_replace_all(dphon, new),
+    ipa = str_replace_all(ipa, "'", "ˈ"),
+    ipa = str_replace_all(ipa, ",", "ˌ"),
+    ipa_syl = str_replace_all(phon, new),
+    ipa_syl = str_replace_all(ipa_syl, "/", ".")
   )
 ```
 
