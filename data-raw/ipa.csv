@@ -1,7 +1,7 @@
 category,symbol,ipa,example
 monophtong,0,ɒ,bod
 monophtong,i,iː,bead
-monophtong,A,ɑ:,bard
+monophtong,A,ɑː,bard
 monophtong,I,ɪ,bid
 monophtong,&,æ,bad
 monophtong,V,ʌ,bud
@@ -34,9 +34,12 @@ fricative,z,z,lizard
 fricative,D,ð,leather
 fricative,Z,ʒ,leisure
 nasal,m,m,whim
+nasal,M,m,whim
 nasal,n,n,win
 nasal,9,ŋ,wing
+nasal,N,ŋ,wing
 approximant,l,l,lair
+approximant,L,l,lair
 approximant,r,r,rare
 approximant,w,w,ware
 approximant,j,j,yeah

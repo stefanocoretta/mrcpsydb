@@ -8,6 +8,7 @@ format: html
 #| label: setup
 
 library(tidyverse)
+library(phonetisr)
 ```
 
 ```{r}
@@ -17,7 +18,6 @@ old <- ipa$symbol
 new <- ipa$ipa
 
 names(new) <- old
-
 ```
 
 
@@ -41,7 +41,8 @@ mrc_db <- read_fwf(
     ipa = str_replace_all(ipa, "'", "ˈ"),
     ipa = str_replace_all(ipa, ",", "ˌ"),
     ipa_syl = str_replace_all(phon, new),
-    ipa_syl = str_replace_all(ipa_syl, "/", ".")
+    ipa_syl = str_replace_all(ipa_syl, "/", "."),
+    phones = phonetise(ipa, multi = c("tʃ", "dʒ", "aɪ", "eɪ", "oɪ", "eə", "ɪə", "aʊ", "əʊ"), diacritics = TRUE)
   )
 ```
 

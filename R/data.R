@@ -34,6 +34,7 @@
 #'   \item{stress}{Stress pattern}
 #'   \item{ipa}{Transcription in International Phonetic Alphabet}
 #'   \item{ipa_syl}{Transcription in International Phonetic Alphabet with syllabic boundaries}
+#'   \item{phones}{Tokenised transcription}
 #' }
 #' @source <http://hdl.handle.net/20.500.12024/1054>
 "mrc_db"
